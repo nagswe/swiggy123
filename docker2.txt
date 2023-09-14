@@ -1,0 +1,49 @@
+sudo -i
+yum install docker -y
+service docker start
+docker images
+docker ps -a
+docker pull ubuntu
+docker images
+docker run -it --name cont1 ubuntu
+apt update -y
+apt upgrade -y
+apt install git maven tree -y
+exit
+docker ps -a
+docker start cont1
+docker attach cont1
+ls
+touch file{1..5}
+ll
+exit
+docker ps -a
+docker commit cont1 nagesh1
+docker images
+docker run -it --name cont1 nagesh1
+ll
+mvn --version
+tree --version
+git --version
+exit
+docker diff cont1
+
+vim Dockerfile 
+FROM ubuntu
+RUN apt update -y
+RUN apt install git default-jre default-jdk tree -y
+RUN touch file{1..3}
+WORKDIR /tmp
+docker build -t nagesh2 .
+docker images
+docker run -it --name cont3 nagesh2
+tree --version
+cd
+cd /
+ll
+
+
+
+
+
+
