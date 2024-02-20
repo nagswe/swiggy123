@@ -1,0 +1,21 @@
+hosting website in ec2
+
+sudo -i
+sudo yum update -y
+yum install httpd -y
+systemctl status httpd
+systemctl enable httpd
+systemctl start httpd
+mkdir project1
+cd project1/
+wget paste the project
+ls -lrt
+unzip complex.zip
+ls -lrt
+rm -rf complex.zip
+cd complex
+ls -lrt
+mv * /var/www/html/
+cd /var/www/html/
+ls -lrt
+copy public ip and check
